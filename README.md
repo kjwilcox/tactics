@@ -1,2 +1,3 @@
+[![Build Status](https://travis-ci.org/kjwilcox/tactics.svg?branch=master)](https://travis-ci.org/kjwilcox/tactics)
 # tactics
-Turn-based tactics RPG
+A turn-based tactical RPG
