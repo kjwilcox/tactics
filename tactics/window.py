@@ -16,6 +16,9 @@ def get_window():
     :return: Main pyglet game window.
     """
     global _window
-    if not _window:
-        _window = create_window()
-    return _window
+    if _window:
+        return _window
+
+    window = create_window()
+    _window = window
+    return window
