@@ -17,11 +17,12 @@ def main():
 
     fps_display = pyglet.clock.ClockDisplay()
 
-    @window.event
     def on_draw():
         """ Draw screen. """
         window.clear()
         fps_display.draw()
+
+    window.event(on_draw)
 
     # Register game state update logic
     pyglet.clock.schedule_interval(update, TICK_RATE)
