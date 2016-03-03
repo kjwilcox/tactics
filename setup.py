@@ -16,4 +16,7 @@ setup(
     install_requires=[
         'pyglet',
     ],
+    tests_requires=[
+        'flexmock',
+    ]
 )

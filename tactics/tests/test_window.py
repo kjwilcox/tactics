@@ -1,6 +1,6 @@
 from tactics import window as module
 
-import flexmock
+from flexmock import flexmock
 
 
 def test_get_window_uses_cached_window():
