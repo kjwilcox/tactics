@@ -8,8 +8,9 @@ def test_update_does_not_raise():
 
 
 def test_main_does_not_raise():
-    flexmock(module).should_receive('pyglet').and_return(
-        flexmock(window=flexmock(Window=flexmock(
+    flexmock(
+        module,
+        pyglet=flexmock(window=flexmock(Window=flexmock(
             event=lambda: None,
         )))
     )
