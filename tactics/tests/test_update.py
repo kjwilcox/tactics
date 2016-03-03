@@ -1,4 +1,4 @@
-from tactics import main as module
+from tactics import update as module
 
 
 def test_update_does_not_raise():
