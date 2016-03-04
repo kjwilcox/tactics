@@ -13,7 +13,7 @@ def create_window():
 
 def get_window():
     """
-    :return: Main pyglet game window.
+    :return: pyglet window.
     """
     global _window
     if _window:
