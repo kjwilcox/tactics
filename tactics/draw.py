@@ -1,6 +1,6 @@
 import pyglet
 
-from .window import get_window
+from tactics.window import get_window
 
 
 _fps_display = None

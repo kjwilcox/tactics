@@ -1,8 +1,8 @@
 import pyglet
 
-from .draw import on_draw
-from .update import update
-from .window import get_window
+from tactics.draw import on_draw
+from tactics.update import update
+from tactics.window import get_window
 
 TARGET_FRAMERATE = 60
 TICK_RATE = 1 / TARGET_FRAMERATE  # Frame time, in seconds
