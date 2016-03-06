@@ -9,6 +9,10 @@ TICK_RATE = 1 / TARGET_FRAMERATE  # Frame time, in seconds
 
 
 def main():
+
+    pyglet.resource.path = ['assets/images/tiles']
+    pyglet.resource.reindex()
+
     # Register draw handler
     get_window().event(on_draw)
 

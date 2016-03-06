@@ -1,17 +1,25 @@
 import pyglet
 
+from tactics import game_map
 from tactics.window import get_window
 
 
-_fps_display = None
+fps_counter = pyglet.clock.ClockDisplay()
+
+
+def draw_fps_counter():
+    fps_counter.draw()
+
+
+def clear_screen():
+    get_window().clear()
 
 
 def on_draw():
     """ Draw screen. """
-    get_window().clear()
 
-    global _fps_display
-    if not _fps_display:
-        _fps_display = pyglet.clock.ClockDisplay()
+    clear_screen()
 
-    _fps_display.draw()
+    game_map.get_map().draw()
+
+    draw_fps_counter()
