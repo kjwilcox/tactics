@@ -4,8 +4,6 @@ import pyglet
 import pyrsistent
 
 
-
-
 class TileMap:
     def __init__(self, x_size, y_size, tile_size):
         self.size = pyrsistent.m(x=x_size, y=y_size)
