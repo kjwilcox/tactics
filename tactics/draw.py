@@ -1,6 +1,6 @@
 import pyglet
 
-from tactics import game_map
+from tactics import game_objects
 from tactics.window import get_window
 
 
@@ -20,6 +20,6 @@ def on_draw():
 
     clear_screen()
 
-    game_map.get_map().draw()
+    game_objects.get_battle().draw()
 
     draw_fps_counter()
