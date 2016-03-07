@@ -12,7 +12,7 @@ def get_loader():
             script_home=os.path.dirname(
                 os.path.abspath(__file__)
             ),
-            path = ['assets/images/tiles'],
+            path=['assets/images/tiles'],
         )
         _loader.reindex()
 

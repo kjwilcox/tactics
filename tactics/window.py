@@ -11,7 +11,7 @@ def create_window():
     """
     return pyglet.window.Window(
         config.MAP_SIZE.x * config.TILE_SIZE,
-        config.MAP_SIZE.y * config.TILE_SIZE
+        config.MAP_SIZE.y * config.TILE_SIZE,
     )
 
 
