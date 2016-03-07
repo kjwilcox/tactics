@@ -1,6 +1,6 @@
-import pyglet
-
 from tactics import config
+from tactics import multimedia
+from tactics.models import vector
 
 
 class Unit:
@@ -9,11 +9,12 @@ class Unit:
         self.position = position
         self.stats = stats
 
-        self._sprite = pyglet.sprite.Sprite(
-            self.image,
-            x=position.x*config.TILE_SIZE,
-            y=position.y*config.TILE_SIZE,
-            subpixel=True,
+        self._sprite = multimedia.Sprite(
+            image=self.image,
+            coord=vector.Vector2(
+                x=position.x*config.TILE_SIZE,
+                y=position.y*config.TILE_SIZE,
+            )
         )
 
     def draw(self):
