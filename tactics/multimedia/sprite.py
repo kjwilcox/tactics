@@ -6,12 +6,13 @@ class Sprite:
         self._pyglet_sprite = pyglet.sprite.Sprite(
             image,
             x=coord.x, y=coord.y,
-            batch=batch,
+            batch=batch.pyglet_batch,
         )
 
     def draw(self):
         self._pyglet_sprite.draw()
 
 
-class SpriteBatch(pyglet.graphics.Batch):
-    pass
+class SpriteBatch:
+    def __init__(self):
+        self.pyglet_batch = pyglet.graphics.Batch()
