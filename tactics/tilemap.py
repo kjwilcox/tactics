@@ -3,12 +3,16 @@ import random
 import pyglet
 import pyrsistent
 
+from tactics import loader
+
 
 class TileMap:
     def __init__(self, x_size, y_size, tile_size):
         self.size = pyrsistent.m(x=x_size, y=y_size)
-        grass_image = pyglet.resource.image("grass.png")
-        water_image = pyglet.resource.image("water.png")
+
+        loader.get_loader()
+        grass_image = loader.get_loader().image("grass.png")
+        water_image = loader.get_loader().image("water.png")
         images = [grass_image, water_image]
 
         self.sprite_batch = pyglet.graphics.Batch()

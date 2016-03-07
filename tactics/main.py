@@ -7,10 +7,6 @@ from tactics.window import get_window
 
 
 def main():
-
-    pyglet.resource.path = ['assets/images/tiles']
-    pyglet.resource.reindex()
-
     # Register draw handler
     get_window().event(on_draw)
 
