@@ -12,8 +12,15 @@ def get_loader():
             script_home=os.path.dirname(
                 os.path.abspath(__file__)
             ),
-            path=['assets/images/tiles'],
+            path=[
+                'assets/images/tiles',
+                'assets/images/units',
+            ],
         )
         _loader.reindex()
 
     return _loader
+
+
+def load_image(path):
+    return get_loader().image(path)

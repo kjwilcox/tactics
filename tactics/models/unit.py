@@ -13,6 +13,7 @@ class Unit:
             self.image,
             x=position.x*config.TILE_SIZE,
             y=position.y*config.TILE_SIZE,
+            subpixel=True,
         )
 
     def draw(self):
