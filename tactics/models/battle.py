@@ -5,3 +5,6 @@ class Battle:
 
     def draw(self):
         self.map.draw()
+
+        for team in self.teams:
+            team.draw()
