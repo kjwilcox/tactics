@@ -5,17 +5,17 @@ from tactics.models import tile as module
 
 def mock_loader():
     flexmock(module).should_receive(
-        'loader.get_loader'
+        'loader.load_image'
     ).and_return(
-        flexmock(
-            image=lambda name: None
-        )
+        flexmock()
     )
 
 
 def test_grass_tile_does_not_raise():
+    mock_loader()
     module.GrassTile()
 
 
 def test_water_tile_does_not_raise():
+    mock_loader()
     module.WaterTile()
