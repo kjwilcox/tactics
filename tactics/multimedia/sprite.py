@@ -16,3 +16,6 @@ class Sprite:
 class SpriteBatch:
     def __init__(self):
         self.pyglet_batch = pyglet.graphics.Batch()
+
+    def draw(self):
+        self.pyglet_batch.draw()
