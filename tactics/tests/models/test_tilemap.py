@@ -3,16 +3,15 @@ from tactics.models import tilemap as module
 from flexmock import flexmock
 
 
-def mock_image_loader():
-    flexmock(module).should_receive(
-        'loader.load_image'
-    ).and_return(
-        flexmock()
-    )
-
-
 def test_tilemap_creation_and_draw_does_not_raise():
-    mock_image_loader()
+    mock_tile = flexmock(image=flexmock())
+    flexmock(module).should_receive(
+        'tile.GrassTile'
+    ).and_return(mock_tile)
+    flexmock(module).should_receive(
+        'tile.WaterTile'
+    ).and_return(mock_tile)
+
     flexmock(module).should_receive(
         'multimedia.SpriteBatch'
     ).and_return(flexmock(draw=lambda: None))
