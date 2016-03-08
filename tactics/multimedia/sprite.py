@@ -6,7 +6,7 @@ class Sprite:
         self._pyglet_sprite = pyglet.sprite.Sprite(
             image,
             x=coord.x, y=coord.y,
-            batch=batch.pyglet_batch,
+            batch=batch.pyglet_batch if batch else None,
         )
 
     def draw(self):
