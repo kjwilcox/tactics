@@ -2,8 +2,8 @@ import pyglet
 
 from tactics import config
 from tactics.draw import on_draw
+from tactics.multimedia.window import get_window
 from tactics.update import update
-from tactics.window import get_window
 
 
 def main():

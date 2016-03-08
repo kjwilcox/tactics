@@ -1,6 +1,6 @@
 from tactics import config
-from tactics import loader
 from tactics.models import battle, team, tilemap, unit, vector
+from tactics.multimedia import loader
 
 _battle = None
 

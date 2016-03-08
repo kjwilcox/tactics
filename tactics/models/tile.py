@@ -1,4 +1,4 @@
-from tactics import loader
+from tactics.multimedia import loader
 
 
 class Tile:

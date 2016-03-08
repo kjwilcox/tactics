@@ -1,7 +1,7 @@
 import pyglet
 
 from tactics import game_objects
-from tactics.window import get_window
+from tactics.multimedia.window import get_window
 
 
 fps_counter = pyglet.clock.ClockDisplay()
