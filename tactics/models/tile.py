@@ -2,6 +2,8 @@ from tactics.multimedia import loader
 
 
 class Tile:
+    image_path = None
+
     def __init__(self):
         self.image = loader.load_image(self.image_path)
 

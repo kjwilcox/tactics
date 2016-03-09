@@ -1,8 +1,8 @@
+import functools
+
 import pyglet
 
 from tactics import config
-
-_window = None
 
 
 def create_window():
@@ -15,14 +15,10 @@ def create_window():
     )
 
 
+@functools.lru_cache
 def get_window():
     """
     :return: pyglet window.
     """
-    global _window
-    if _window:
-        return _window
+    return create_window()
 
-    window = create_window()
-    _window = window
-    return window
