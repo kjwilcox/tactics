@@ -15,7 +15,7 @@ def create_window():
     )
 
 
-@functools.lru_cache
+@functools.lru_cache()
 def get_window():
     """
     :return: pyglet window.
